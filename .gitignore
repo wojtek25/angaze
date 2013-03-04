@@ -6,3 +6,8 @@
 /vendor/
 /bin/
 /composer.phar
+
+
+/.idea/
+/tmp/
+/nbproject/
