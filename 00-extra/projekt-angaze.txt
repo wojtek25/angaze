@@ -1,1 +1,17 @@
 Uruchomienie projektu
+
+
+
+
+composer update doctrine/doctrine-migrations-bundle
+
+
+Środowisko IDE
+1. Uruchomienie i konfiguracja PHPStorm
+
+Instalacja zależności
+1. composer self-update
+2. composer install
+
+Tworzymy bazę danych
+1. create-empty-database.sql
