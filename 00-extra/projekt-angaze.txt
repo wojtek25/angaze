@@ -1,10 +1,28 @@
 Uruchomienie projektu
 
+1. Symfony 2 SE
+
+2. Dodatkowe punkty/Modyfikacje
+
+    a. Usuwamy ACME
+    b. Gitignore
+    c. Dodamy Bazę danych
+    d. Dodamy migrację
+    e. Podpowiedzi (checksheet)
 
 
+Polecenia
 
-composer update doctrine/doctrine-migrations-bundle
+1. git clone git@github.com:gajdaw/symfony-standard.git
+2. git checkout –b dev v2.2.0
+3. git merge origin/2.2-Acme
+4. git merge origin/2.2-Gitignore
+5. git merge origin/2.2-db
+6. git merge origin/2.2-DoctrineMigrationBundle
+7. git merge origin/2.2-Cheetsheet
 
+Uaktualnienie zależności
+    composer update doctrine/doctrine-migrations-bundle
 
 Środowisko IDE
 1. Uruchomienie i konfiguracja PHPStorm
@@ -21,3 +39,9 @@ Tworzymy bazę danych
 
 Tworzymy Bundla
     php app/console generate:bundle --namespace=Gajdaw/AngazeBundle --dir=src --no-interaction
+
+
+
+
+
+
