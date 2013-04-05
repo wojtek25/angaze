@@ -18,3 +18,6 @@ Tworzymy bazę danych
 2. Inicjalizacja migracji (tylko leader)
 3. Migrujemy bazę danych:
     php app/console doctrine:migrations:migrate
+
+Tworzymy Bundla
+    php app/console generate:bundle --namespace=Gajdaw/AngazeBundle --dir=src --no-interaction
