@@ -1,0 +1,5 @@
+gajdaw_angaze:
+    resource: "@GajdawAngazeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
