@@ -1,0 +1,30 @@
+SONATA
+
+----------------------------------------------------------------------------------------
+RESTART
+
+git reset --hard
+composer install
+
+----------------------------------------------------------------------------------------
+
+composer require knplabs/knp-menu-bundle:1.1.*@dev --no-update
+composer require friendsofsymfony/user-bundle:1.3.1 --no-update
+composer require sonata-project/cache-bundle:2.1.*@dev --no-update
+composer require sonata-project/jquery-bundle:1.8.*@dev --no-update
+composer require sonata-project/block-bundle:2.2.*@dev --no-update
+composer require sonata-project/admin-bundle:2.2.*@dev --no-update
+composer require sonata-project/doctrine-orm-admin-bundle:2.2.*@dev --no-update
+composer require sonata-project/intl-bundle:2.1.* --no-update
+composer require sonata-project/easy-extends-bundle:2.1.*@dev --no-update
+composer require sonata-project/user-bundle:2.2.*@dev --no-update
+
+composer update sonata-project/admin-bundle
+
+
+----------------------------------------------------------------------------------------
+
+php app/console sonata:easy-extends:generate --dest=src SonataUserBundle
+
+
+----------------------------------------------------------------------------------------

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+<!--
+
+
+Konfiguracja w formacie yaml, np. config.yml
+
+services:
+    twig.extension.funny:
+        class: Gajdaw\TekstBundle\Twig\FunnyExtension
+        tags:
+            - { name: twig.extension }
+
+-->
+
+
+
+    <services>
+        <service id="twig.extension.funny" class="Gajdaw\TekstBundle\Twig\FunnyExtension">
+            <tag name="twig.extension" />
+        </service>
+    </services>
+
+
+</container>

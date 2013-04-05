@@ -1,0 +1,29 @@
+1. Rozpoczęcie pracy z migracjami (w nowym projekcie)
+
+    a) Najpierw tworzymy pustą bazę danych oraz konto dostępu.
+       Możemy użyć skryptów sql/bat.
+
+    b) Następnie tworzymy migracje (przed utworzeniem jakichkolwiek tabel):
+
+        php app/console doctrine:migrations:generate
+
+    c) Teraz migrujemy bazę danych:
+
+        php app/console doctrine:migrations:migrate
+
+
+    Zaglądamy do bazy danych: baza zawiera tabelę migration_versions
+
+
+2. W każdym momencie możemy sprawdzić stan migracji:
+
+    php app/console doctrine:migrations:status
+
+
+
+3. Procedura modyfikacji bazy danych
+
+  Najpierw modyfikujemy model, a następnie wydajemy polecenia:
+
+    php app/console doctrine:migrations:diff
+    php app/console doctrine:migrations:migrate

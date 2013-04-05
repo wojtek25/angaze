@@ -1,0 +1,18 @@
+mkdir example
+cd example
+
+git clone https://github.com/gajdaw/symfony-standard.git -b 2.2-Startup .
+
+git clone https://github.com/gajdaw/symfony-standard.git -b 2.2-Acme .
+git clone https://github.com/gajdaw/symfony-standard.git -b 2.2-KnpMenuBundle .
+git clone https://github.com/gajdaw/symfony-standard.git -b 2.2-FOSUserBundle .
+git clone https://github.com/gajdaw/symfony-standard.git -b 2.2-StofDoctrineExtensionsBundle .
+
+
+git remote rm origin
+git branch -m 2.2 master
+composer install
+
+
+===================================================================
+git clone https://github.com/symfony/symfony-standard.git -b 2.2 .

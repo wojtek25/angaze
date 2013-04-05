@@ -1,0 +1,6 @@
+composer install
+composer update doctrine/doctrine-fixtures-bundle
+composer update doctrine/doctrine-fixtures-bundle
+composer update stof/doctrine-extensions-bundle
+composer update friendsofsymfony/user-bundle
+composer update knplabs/knp-menu-bundle

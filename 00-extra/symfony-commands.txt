@@ -1,0 +1,21 @@
+php app/console
+
+php app/console generate:bundle --namespace=My/FrontendBundle --dir=src --no-interaction
+
+php app/console generate:bundle --help
+
+php app/console assets:install web
+
+php app/console cache:clear --env=prod
+php app/console cache:clear
+
+
+
+php app/console generate:doctrine:entity
+php app/console generate:doctrine:entities My/Frontend
+
+php app/console doctrine:schema:update --force
+php app/console doctrine:schema:drop --force
+php app/console doctrine:schema:create
+
+php app/console doctrine:fixtures:load
