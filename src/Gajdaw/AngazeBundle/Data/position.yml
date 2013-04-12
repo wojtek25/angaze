@@ -1,3 +1,3 @@
-- { name: Preses }
-- { name: Manager }
-- { name: Employee }
+- { name: Profesor }
+- { name: Asystent }
+- { name: Adiunkt }
