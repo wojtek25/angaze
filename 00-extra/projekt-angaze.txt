@@ -1,4 +1,5 @@
-Uruchomienie projektu
+I. Uruchomienie projektu
+========================
 
 1. Symfony 2 SE
 
@@ -41,6 +42,27 @@ Tworzymy Bundla
     php app/console generate:bundle --namespace=Gajdaw/AngazeBundle --dir=src --no-interaction
 
 
+II. Każdy uczestnik projektu tworzy fragment modelu
+===================================================
+
+
+III. Dołączanie do projektu
+===========================
+
+  1. Klon repozytorium
+     git clone git@github.com:tdd-php/angaze.git .
+
+  2. Aktualizacja zależności
+      composer self-update
+      composer install
+
+  3. Fork repozytorium
+      git@github.com:tdd-php/angaze.git
+
+  4. Konfiguracja własnego forka w lokalnym repo na dysku C
+
+      git remote add upstream git@github.com:JANEK/angaze.git
+      (użyj adresu własnego forka)
 
 
 
