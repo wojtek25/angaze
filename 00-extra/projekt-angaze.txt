@@ -118,3 +118,17 @@ IV. Aktualizacja projektu
   2. git pull origin master
   3. php app/console doctrine:migrations:migrate
 
+
+VI. Rozszerzamy projekt o nowe bundle
+=====================================
+
+1. Adres repozytorium symfony standard:
+
+git remote add symfony-standard git@github.com:gajdaw/symfony-standard.git
+
+2. Pracujemy w głęzi master:
+git checkout master
+
+3. git merge symfony-standard/2.2-DoctrineFixturesBundle
+
+
