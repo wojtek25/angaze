@@ -148,3 +148,9 @@ VII. Uaktualnienie zależności
 git pull origin master
 composer install
 
+
+VIII. Fixtury
+=============================
+
+php app/console doctrine:fixtures:load
+
