@@ -72,7 +72,7 @@ class Course
     /**
      * Set tmp
      *
-     * @param string $name
+     * @param string $tmp
      * @return Course
      */
     public function setTmp($tmp)
