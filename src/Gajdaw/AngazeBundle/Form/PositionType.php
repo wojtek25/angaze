@@ -12,6 +12,7 @@ class PositionType extends AbstractType
     {
         $builder
             ->add('name')
+            ->add('tmp')
         ;
     }
 
