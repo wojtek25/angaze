@@ -12,6 +12,7 @@ class CourseTypeType extends AbstractType
     {
         $builder
             ->add('name')
+            ->add('tmp')
         ;
     }
 
