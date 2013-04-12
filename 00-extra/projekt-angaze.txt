@@ -46,6 +46,43 @@ II. Każdy uczestnik projektu tworzy fragment modelu
 
 Model: http://symfony.gajdaw.pl/rysunki-html/23-01.html
 
+1. Pracujemy w głaęziach (np. dev)
+
+   git checkout -b dev
+
+2. Tworzymy model
+   php app/console doctrine:generate:entity
+
+   GajdawAngazeBundle:Position
+   GajdawAngazeBundle:Faculty
+   GajdawAngazeBundle:Study
+   GajdawAngazeBundle:Subjejct
+
+   Jedna kolumna   name (string: 255)
+
+3. Tworzymy migracje
+
+   php app/console doctrine:migrations:diff
+
+4. Migrujemy bazę
+
+   php app/console doctrine:migrations:migrate
+
+5. Generujemy panel CRUD
+
+   php app/console doctrine:generate:crud
+
+   Podajemy utworzone Entity, np.:
+
+   GajdawAngazeBundle:Position
+   GajdawAngazeBundle:Faculty
+   GajdawAngazeBundle:Study
+   GajdawAngazeBundle:Subjejct
+
+6. Sprawdzamy panel CRUD
+
+    http://localhost/angaze/web/app_dev.php/faculty
+
 
 
 
@@ -71,4 +108,12 @@ III. Dołączanie do projektu
 
   6. Tworzymy bazę danych
       php app/console doctrine:migrations:migrate
+
+
+
+IV. Aktualizacja projektu
+=========================
+
+  1. git pull origin master
+  2. php app/console doctrine:migrations:migrate
 
