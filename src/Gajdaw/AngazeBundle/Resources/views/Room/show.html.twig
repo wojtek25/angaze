@@ -1,6 +1,6 @@
-{% extends '::base.html.twig' %}
+{% extends "GajdawAngazeBundle::layout.html.twig" %}
 
-{% block body -%}
+{% block contents %}
     <h1>Room</h1>
 
     <table class="record_properties">
@@ -12,6 +12,10 @@
             <tr>
                 <th>Name</th>
                 <td>{{ entity.name }}</td>
+            </tr>
+            <tr>
+                <th>Tmp</th>
+                <td>{{ entity.tmp }}</td>
             </tr>
         </tbody>
     </table>
