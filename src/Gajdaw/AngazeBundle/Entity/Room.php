@@ -34,6 +34,14 @@ class Room
      *
      * @return integer 
      */
+    private $tmp;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
     public function getId()
     {
         return $this->id;
