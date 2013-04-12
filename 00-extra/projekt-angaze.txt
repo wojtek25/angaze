@@ -154,3 +154,22 @@ VIII. Fixtury
 
 php app/console doctrine:fixtures:load
 
+
+IX. Layout + menu
+=================
+
+1. Modyfikacje w pliku layout.html.twig (dodajemy pozycję menu dla własnego modelu)
+2. Modyfikujemy własne widoki
+
+
+X. Dodajemy kolumnę tmp w modelu
+================================
+
+1. Zmiana modelu: dodajemy kolumnę tmp (identyczną jak name)
+2. php app/console doctrine:migrations:diff
+3. php app/console doctrine:migrations:migrate
+4. Usuwamy fomularz: Form/EmployeeType.php
+5. php app/console doctrine:generate:form GajdawAngazeBundle:Employee
+6. Dostosowujemy widoki: index.html.twig, show.html.twig
+
+

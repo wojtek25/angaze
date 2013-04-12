@@ -28,11 +28,18 @@ class Employee
      */
     private $name;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tmp", type="string", length=255)
+     */
+    private $tmp;
+
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -48,17 +55,40 @@ class Employee
     public function setName($name)
     {
         $this->name = $name;
-    
+
         return $this;
     }
 
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set tmp
+     *
+     * @param string $tmp
+     * @return Employee
+     */
+    public function setTmp($tmp)
+    {
+        $this->tmp = $tmp;
+
+        return $this;
+    }
+
+    /**
+     * Get tmp
+     *
+     * @return string
+     */
+    public function getTmp()
+    {
+        return $this->tmp;
     }
 }
