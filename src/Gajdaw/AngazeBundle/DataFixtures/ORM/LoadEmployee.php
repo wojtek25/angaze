@@ -21,6 +21,7 @@ class LoadEmployee implements FixtureInterface
         foreach ($yml as $item) {
             $employee = new Employee();
             $employee->setName($item['name']);
+            $employee->setTmp($item['tmp']);
             $manager->persist($employee);
         }
         $manager->flush();
