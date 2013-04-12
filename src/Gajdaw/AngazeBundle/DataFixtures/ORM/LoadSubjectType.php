@@ -21,7 +21,6 @@ class LoadSubjectType implements FixtureInterface
         foreach ($yml as $item) {
             $subjectType = new SubjectType();
             $subjectType->setName($item['name']);
-            $subjectType->setTmp($item['tmp']);
             $manager->persist($subjectType);
         }
         $manager->flush();
