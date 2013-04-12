@@ -12,6 +12,7 @@ class DepartmentType extends AbstractType
     {
         $builder
             ->add('name')
+            ->add('tmp')
         ;
     }
 
