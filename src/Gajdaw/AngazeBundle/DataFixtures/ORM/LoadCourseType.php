@@ -21,6 +21,7 @@ class LoadCourseType implements FixtureInterface
         foreach ($yml as $item) {
             $courseType = new CourseType();
             $courseType->setName($item['name']);
+            $courseType->setTmp($item['tmp']);
             $manager->persist($courseType);
         }
         $manager->flush();
