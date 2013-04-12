@@ -41,9 +41,12 @@ Tworzymy bazę danych
 Tworzymy Bundla
     php app/console generate:bundle --namespace=Gajdaw/AngazeBundle --dir=src --no-interaction
 
-
 II. Każdy uczestnik projektu tworzy fragment modelu
 ===================================================
+
+Model: http://symfony.gajdaw.pl/rysunki-html/23-01.html
+
+
 
 
 III. Dołączanie do projektu
@@ -64,6 +67,8 @@ III. Dołączanie do projektu
       git remote add upstream git@github.com:JANEK/angaze.git
       (użyj adresu własnego forka)
 
+  5. Uruchamiamy IDE
 
-
+  6. Tworzymy bazę danych
+      php app/console doctrine:migrations:migrate
 
