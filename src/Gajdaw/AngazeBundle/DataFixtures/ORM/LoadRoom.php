@@ -4,24 +4,24 @@ namespace Gajdaw\AngazeBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Gajdaw\AngazeBundle\Entity\Room;
+use Gajdaw\AngazeBundle\Entity\Employee;
 use Symfony\Component\Yaml\Yaml;
 
-class LoadRoom implements FixtureInterface
+class LoadEmployee implements FixtureInterface
 {
     function load(ObjectManager $manager)
     {
         $filename =
             __DIR__ .
-                DIRECTORY_SEPARATOR . '..' .
-                DIRECTORY_SEPARATOR . '..' .
-                DIRECTORY_SEPARATOR . 'Data/room.yml';
+            DIRECTORY_SEPARATOR . '..' .
+            DIRECTORY_SEPARATOR . '..' .
+            DIRECTORY_SEPARATOR . 'Data/employee.yml';
 
         $yml = Yaml::parse(file_get_contents($filename));
         foreach ($yml as $item) {
-            $room = new Room();
-            $room->setName($item['name']);
-            $manager->persist($room);
+            $employee = new Employee();
+            $employee->setName($item['name']);
+            $manager->persist($employee);
         }
         $manager->flush();
 
