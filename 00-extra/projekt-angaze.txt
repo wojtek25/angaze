@@ -126,9 +126,20 @@ VI. Rozszerzamy projekt o nowe bundle
 
 git remote add symfony-standard git@github.com:gajdaw/symfony-standard.git
 
-2. Pracujemy w głęzi master:
+2. Pracujemy w głęzi tmp:
 git checkout master
+git checkout -b tmp
 
-3. git merge symfony-standard/2.2-DoctrineFixturesBundle
+3. Pobieramy gałąź 2.2-DoctrineFixturesBundle
+
+git pull symfony-standard 2.2-DoctrineFixturesBundle
+
+4. Dołączanie gałęzi:
+
+ git checkout master
+ git merge tmp
+
+5. Aktualizacja zależności:
+
 
 
