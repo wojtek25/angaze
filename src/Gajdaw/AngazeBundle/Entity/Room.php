@@ -28,11 +28,10 @@ class Room
      */
     private $name;
 
-
     /**
-     * Get id
+     * @var string
      *
-     * @return integer 
+     * @ORM\Column(name="tmp", type="string", length=255)
      */
     private $tmp;
 

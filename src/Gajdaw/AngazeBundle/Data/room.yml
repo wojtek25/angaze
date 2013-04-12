@@ -1,2 +1,2 @@
-- { name: Dział IT }
-- { name: Administacja }
+- { name: Dział IT, tmp: like }
+- { name: Administacja, tmp: niefajne }
