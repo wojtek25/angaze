@@ -119,7 +119,7 @@ IV. Aktualizacja projektu
   3. php app/console doctrine:migrations:migrate
 
 
-VI. Rozszerzamy projekt o nowe bundle
+VI. Rozszerzamy projekt o nowe bundle (tylko leader)
 =====================================
 
 1. Adres repozytorium symfony standard:
@@ -142,4 +142,9 @@ git pull symfony-standard 2.2-DoctrineFixturesBundle
 5. Aktualizacja zależności:
 
 
+VII. Uaktualnienie zależności
+=============================
+
+git pull origin master
+composer install
 
