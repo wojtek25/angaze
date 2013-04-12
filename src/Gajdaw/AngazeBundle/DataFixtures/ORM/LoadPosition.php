@@ -19,9 +19,9 @@ class LoadPosition implements FixtureInterface
 
         $yml = Yaml::parse(file_get_contents($filename));
         foreach ($yml as $item) {
-            $p = new Position();
-            $p->setName($item['name']);
-            $manager->persist($p);
+            $position = new Position();
+            $position->setName($item['name']);
+            $manager->persist($position);
         }
         $manager->flush();
 
