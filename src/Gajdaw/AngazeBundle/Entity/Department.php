@@ -43,6 +43,13 @@ class Department
     private $tmp;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="lorem", type="string", length=255)
+     */
+    private $lorem;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -119,5 +126,28 @@ class Department
     public function getTmp()
     {
         return $this->tmp;
+    }
+
+    /**
+     * Set lorem
+     *
+     * @param string $lorem
+     * @return Department
+     */
+    public function setLorem($lorem)
+    {
+        $this->lorem = $lorem;
+
+        return $this;
+    }
+
+    /**
+     * Get lorem
+     *
+     * @return string
+     */
+    public function getLorem()
+    {
+        return $this->lorem;
     }
 }

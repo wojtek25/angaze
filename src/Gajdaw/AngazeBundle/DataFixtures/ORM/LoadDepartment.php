@@ -23,6 +23,7 @@ class LoadDepartment implements FixtureInterface
             $department->setName($item['name']);
             $department->setShortcut($item['shortcut']);
             $department->setTmp($item['tmp']);
+            $department->setLorem($item['lorem']);
             $manager->persist($department);
         }
         $manager->flush();
