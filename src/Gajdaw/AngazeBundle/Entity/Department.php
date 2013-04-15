@@ -31,6 +31,13 @@ class Department
     /**
      * @var string
      *
+     * @ORM\Column(name="shortcut", type="string", length=255)
+     */
+    private $shortcut;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="tmp", type="string", length=255)
      */
     private $tmp;
@@ -66,6 +73,29 @@ class Department
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set shortcut
+     *
+     * @param string $shortcut
+     * @return Department
+     */
+    public function setShortcut($shortcut)
+    {
+        $this->shortcut = $shortcut;
+
+        return $this;
+    }
+
+    /**
+     * Get shortcut
+     *
+     * @return string
+     */
+    public function getShortcut()
+    {
+        return $this->shortcut;
     }
 
     /**
