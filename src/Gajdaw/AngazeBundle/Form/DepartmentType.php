@@ -14,6 +14,7 @@ class DepartmentType extends AbstractType
             ->add('name')
             ->add('shortcut')
             ->add('tmp')
+            ->add('lorem')
         ;
     }
 
