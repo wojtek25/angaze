@@ -13,7 +13,6 @@ class DepartmentType extends AbstractType
         $builder
             ->add('name')
             ->add('shortcut')
-            ->add('tmp')
             ->add('lorem')
         ;
     }
