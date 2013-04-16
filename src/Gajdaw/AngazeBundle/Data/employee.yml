@@ -1,3 +1,3 @@
-- { name: Janek, tmp: Kowalski }
-- { name: Anna,  tmp: Nowak }
-- { name: Marek, tmp: Nijaki }
+- { name: Janek, surname: Kowalski }
+- { name: Anna,  surname: Nowak }
+- { name: Marek, surname: Nijaki }

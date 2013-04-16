@@ -28,13 +28,13 @@ class Employee
      */
     private $name;
 
+
     /**
      * @var string
      *
-     * @ORM\Column(name="tmp", type="string", length=255)
+     * @ORM\Column(name="surname", type="string", length=255)
      */
-    private $tmp;
-
+    private $surname;
 
     /**
      * Get id
@@ -70,25 +70,26 @@ class Employee
     }
 
     /**
-     * Set tmp
+     * Set surname
      *
-     * @param string $tmp
+     * @param string $surname
      * @return Employee
      */
-    public function setTmp($tmp)
+    public function setSurname($surname)
     {
-        $this->tmp = $tmp;
+        $this->surname = $surname;
 
         return $this;
     }
 
     /**
-     * Get tmp
+     * Get surname
      *
      * @return string
      */
-    public function getTmp()
+    public function getSurname()
     {
-        return $this->tmp;
+        return $this->surname;
     }
+
 }
