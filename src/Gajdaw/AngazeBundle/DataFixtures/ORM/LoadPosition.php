@@ -22,6 +22,7 @@ class LoadPosition implements FixtureInterface
             $position = new Position();
             $position->setName($item['name']);
             $position->setTmp($item['tmp']);
+            $position->setLorem($item['lorem']);
             $manager->persist($position);
         }
         $manager->flush();
