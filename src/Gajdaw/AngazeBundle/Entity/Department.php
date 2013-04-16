@@ -38,13 +38,6 @@ class Department
     /**
      * @var string
      *
-     * @ORM\Column(name="tmp", type="string", length=255)
-     */
-    private $tmp;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="lorem", type="string", length=255)
      */
     private $lorem;
@@ -103,29 +96,6 @@ class Department
     public function getShortcut()
     {
         return $this->shortcut;
-    }
-
-    /**
-     * Set tmp
-     *
-     * @param string $tmp
-     * @return Department
-     */
-    public function setTmp($tmp)
-    {
-        $this->tmp = $tmp;
-
-        return $this;
-    }
-
-    /**
-     * Get tmp
-     *
-     * @return string
-     */
-    public function getTmp()
-    {
-        return $this->tmp;
     }
 
     /**
