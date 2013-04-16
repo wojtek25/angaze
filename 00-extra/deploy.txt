@@ -1,0 +1,4 @@
+ssh -p123456   user@host.example.net
+
+rsync --chmod=a+rwx,g+rwx,o-w -azC --force --delete --progress --exclude-from=rsync_exclude.txt -e "ssh -p123456" ./ user@host.example.net:/home/some/dir/public_html/angaze/
+
