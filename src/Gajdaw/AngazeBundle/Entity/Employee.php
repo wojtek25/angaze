@@ -3,6 +3,7 @@
 namespace Gajdaw\AngazeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Employee
@@ -28,6 +29,11 @@ class Employee
      */
     private $name;
 
+    /**
+     * @Gedmo\Slug(fields={"name", "surname"})
+     * @ORM\Column(length=128, unique=false, nullable=true)
+     */
+    private $slug;
 
     /**
      * @var string
@@ -90,6 +96,26 @@ class Employee
     public function getSurname()
     {
         return $this->surname;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
 }

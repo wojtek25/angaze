@@ -3,6 +3,7 @@
 namespace Gajdaw\AngazeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Position
@@ -35,10 +36,22 @@ class Position
      */
     private $tmp;
     /**
+     * @var string
+     *
+     * @ORM\Column(name="lorem", type="string", length=255)
+     */
+    private $lorem;
+    /**
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(length=128, unique=false, nullable=true)
+     */
+    private $slug;
+    /**
      * Get id
      *
      * @return integer 
      */
+
     public function getId()
     {
         return $this->id;
@@ -88,5 +101,46 @@ class Position
     public function getTmp()
     {
         return $this->tmp;
+    }
+    /**
+     * Set lorem
+     *
+     * @param string $lorem
+     * @return Position
+     */
+    public function setLorem($lorem)
+    {
+        $this->lorem = $lorem;
+
+        return $this;
+    }
+
+    /**
+     * Get lorem
+     *
+     * @return string
+     */
+    public function getLorem()
+    {
+        return $this->lorem;
+    }
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }

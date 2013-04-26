@@ -12,6 +12,7 @@ class FacultyType extends AbstractType
     {
         $builder
             ->add('name')
+            ->add('Shortcut')
         ;
     }
 

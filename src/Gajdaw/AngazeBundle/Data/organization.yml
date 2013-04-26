@@ -1,0 +1,3 @@
+- { name: KNI, curator: Kowalski, tmp: lorem }
+- { name: KNAK,  curator: Nowak, tmp: ipsum }
+- { name: KNH, curator: Nijaki, tmp: dolor }
