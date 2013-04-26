@@ -97,7 +97,7 @@ stof_doctrine_extensions:
         default:
             tree: false
             translatable: false
-            sluggable: false
+            sluggable: true
             timestampable: false
             blameable: false
             loggable: false
