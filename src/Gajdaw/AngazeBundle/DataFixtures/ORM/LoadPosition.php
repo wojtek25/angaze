@@ -21,8 +21,6 @@ class LoadPosition implements FixtureInterface
         foreach ($yml as $item) {
             $position = new Position();
             $position->setName($item['name']);
-            $position->setTmp($item['tmp']);
-            $position->setLorem($item['lorem']);
             $manager->persist($position);
         }
         $manager->flush();
