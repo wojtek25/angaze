@@ -21,7 +21,6 @@ class LoadFaculty implements FixtureInterface
         foreach ($yml as $item) {
             $faculty = new Faculty();
             $faculty->setName($item['name']);
-            $faculty->setShorcut($item['shortcut']);
             $manager->persist($faculty);
         }
         $manager->flush();
