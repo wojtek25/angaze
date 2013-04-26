@@ -31,14 +31,14 @@ class Word
 
     /**
      * @Gedmo\Slug(fields={"title"})
-     * @ORM\Column(length=128, unique=true)
+     * @ORM\Column(length=128, unique=false, nullable=true)
      */
     private $slug;
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -58,7 +58,7 @@ class Word
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -78,7 +78,7 @@ class Word
     /**
      * Get slug
      *
-     * @return string 
+     * @return string
      */
     public function getSlug()
     {
