@@ -21,8 +21,6 @@ class LoadDepartment implements FixtureInterface
         foreach ($yml as $item) {
             $department = new Department();
             $department->setName($item['name']);
-            $department->setShortcut($item['shortcut']);
-            $department->setLorem($item['lorem']);
             $manager->persist($department);
         }
         $manager->flush();
