@@ -1,4 +1,4 @@
-- { name: Matematyka , tmp: 1}
-- { name: Informatyka, tmp: 2 }
-- { name: Architektura krajobrazu, tmp: 3 }
-- { name: Gospodarka przestrzenna, tmp: 4}
+- { name: Matematyka}
+- { name: Informatyka }
+- { name: Architektura krajobrazu }
+- { name: Gospodarka przestrzenna}

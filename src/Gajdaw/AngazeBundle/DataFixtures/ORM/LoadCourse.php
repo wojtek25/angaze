@@ -21,7 +21,6 @@ class LoadCourse implements FixtureInterface
         foreach ($yml as $item) {
             $course = new Course();
             $course->setName($item['name']);
-            $course->setTmp($item['tmp']);
             $manager->persist($course);
         }
         $manager->flush();

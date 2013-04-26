@@ -29,12 +29,6 @@ class Course
      */
     private $name;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="tmp", type="string", length=255)
-     */
-    private $tmp;
 
     /**
      * @Gedmo\Slug(fields={"name"})
@@ -76,28 +70,6 @@ class Course
         return $this->name;
     }
 
-    /**
-     * Set tmp
-     *
-     * @param string $tmp
-     * @return Course
-     */
-    public function setTmp($tmp)
-    {
-        $this->tmp = $tmp;
-
-        return $this;
-    }
-
-    /**
-     * Get tmp
-     *
-     * @return string
-     */
-    public function getTmp()
-    {
-        return $this->tmp;
-    }
     /**
      * Set slug
      *
