@@ -22,7 +22,6 @@ class LoadEmployee implements FixtureInterface
             $employee = new Employee();
             $employee->setName($item['name']);
             $employee->setSurname($item['surname']);
-            $employee->setTmp($item['tmp']);
             $manager->persist($employee);
         }
         $manager->flush();

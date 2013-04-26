@@ -38,14 +38,6 @@ class Employee
     /**
      * @var string
      *
-     * @ORM\Column(name="tmp", type="string", length=255)
-     */
-    private $tmp;
-
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="surname", type="string", length=255)
      */
     private $surname;
@@ -104,29 +96,6 @@ class Employee
     public function getSurname()
     {
         return $this->surname;
-    }
-
-    /**
-     * Set tmp
-     *
-     * @param string tmp
-     * @return Employee
-     */
-    public function setTmp($tmp)
-    {
-        $this->tmp = $tmp;
-
-        return $this;
-    }
-
-    /**
-     * Get tmp
-     *
-     * @return string
-     */
-    public function getTmp()
-    {
-        return $this->tmp;
     }
 
     /**
