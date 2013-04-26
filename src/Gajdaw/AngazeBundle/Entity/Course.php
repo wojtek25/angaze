@@ -3,6 +3,7 @@
 namespace Gajdaw\AngazeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Course
@@ -28,12 +29,12 @@ class Course
      */
     private $name;
 
+
     /**
-     * @var string
-     *
-     * @ORM\Column(name="tmp", type="string", length=255)
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(length=128, unique=false, nullable=true)
      */
-    private $tmp;
+    private $slug;
 
 
     /**
@@ -70,25 +71,22 @@ class Course
     }
 
     /**
-     * Set tmp
+     * Set slug
      *
-     * @param string $tmp
-     * @return Course
+     * @param string $slug
      */
-    public function setTmp($tmp)
+    public function setSlug($slug)
     {
-        $this->tmp = $tmp;
-
-        return $this;
+        $this->slug = $slug;
     }
 
     /**
-     * Get tmp
+     * Get slug
      *
      * @return string
      */
-    public function getTmp()
+    public function getSlug()
     {
-        return $this->tmp;
+        return $this->slug;
     }
 }

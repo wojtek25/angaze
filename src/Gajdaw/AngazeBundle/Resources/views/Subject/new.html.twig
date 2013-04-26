@@ -1,6 +1,6 @@
-{% extends '::base.html.twig' %}
+{% extends "GajdawAngazeBundle::layout.html.twig" %}
 
-{% block body -%}
+{% block contents %}
     <h1>Subject creation</h1>
 
     <form action="{{ path('subject_create') }}" method="post" {{ form_enctype(form) }}>
