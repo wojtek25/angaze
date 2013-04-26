@@ -28,6 +28,12 @@ class Faculty
      */
     private $name;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Shortcut", type="string", length=255)
+     */
+    private $Shortcut;
 
     /**
      * Get id
@@ -60,5 +66,22 @@ class Faculty
     public function getName()
     {
         return $this->name;
+    }
+
+    public function setShorcut($Shortcut)
+    {
+        $this->Shortcut = $Shortcut;
+
+        return $this;
+    }
+
+    /**
+     * Get shortcut
+     *
+     * @return string
+     */
+    public function getShortcut()
+    {
+        return $this->Shortcut;
     }
 }

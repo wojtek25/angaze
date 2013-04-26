@@ -1,6 +1,5 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
+{% extends "GajdawAngazeBundle::layout.html.twig" %}
+{% block contents %}
     <h1>Faculty creation</h1>
 
     <form action="{{ path('faculty_create') }}" method="post" {{ form_enctype(form) }}>

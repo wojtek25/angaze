@@ -1,6 +1,5 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
+{% extends "GajdawAngazeBundle::layout.html.twig" %}
+{% block contents %}
     <h1>Faculty edit</h1>
 
     <form action="{{ path('faculty_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
