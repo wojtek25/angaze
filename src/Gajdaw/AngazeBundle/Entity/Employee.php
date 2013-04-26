@@ -30,7 +30,7 @@ class Employee
     private $name;
 
     /**
-     * @Gedmo\Slug(fields={"name"})
+     * @Gedmo\Slug(fields={"name", "surname"})
      * @ORM\Column(length=128, unique=false, nullable=true)
      */
     private $slug;
