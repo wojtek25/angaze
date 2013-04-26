@@ -1,20 +1,16 @@
 parameters:
     database_driver:   pdo_mysql
 
-#    database_host:     127.0.0.1
-    database_host:     sql8.lh.pl
+    database_host:     127.0.0.1
 
     database_port:     ~
 
-#    database_name:     angaze
-    database_name:     mathplate_angaze
+    database_name:     angaze
 
 
-#    database_user:     editor
-    database_user:     mathplate
+    database_user:     editor
 
-#    database_password: secretPASSWORD
-    database_password: alamakota
+    database_password: secretPASSWORD
 
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
