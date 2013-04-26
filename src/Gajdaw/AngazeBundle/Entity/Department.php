@@ -3,6 +3,7 @@
 namespace Gajdaw\AngazeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Department
@@ -34,6 +35,12 @@ class Department
      * @ORM\Column(name="shortcut", type="string", length=255)
      */
     private $shortcut;
+
+    /**
+     * @Gedmo\Slug(fields={"name", "shortcut"})
+     * @ORM\Column(length=128, unique=false, nullable=true)
+     */
+    private $slug;
 
     /**
      * @var string
@@ -96,6 +103,26 @@ class Department
     public function getShortcut()
     {
         return $this->shortcut;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     /**
