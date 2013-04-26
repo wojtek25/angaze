@@ -30,24 +30,10 @@ class Department
     private $name;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="shortcut", type="string", length=255)
-     */
-    private $shortcut;
-
-    /**
-     * @Gedmo\Slug(fields={"name", "shortcut"})
+     * @Gedmo\Slug(fields={"name"})
      * @ORM\Column(length=128, unique=false, nullable=true)
      */
     private $slug;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="lorem", type="string", length=255)
-     */
-    private $lorem;
 
     /**
      * Get id
@@ -83,29 +69,6 @@ class Department
     }
 
     /**
-     * Set shortcut
-     *
-     * @param string $shortcut
-     * @return Department
-     */
-    public function setShortcut($shortcut)
-    {
-        $this->shortcut = $shortcut;
-
-        return $this;
-    }
-
-    /**
-     * Get shortcut
-     *
-     * @return string
-     */
-    public function getShortcut()
-    {
-        return $this->shortcut;
-    }
-
-    /**
      * Set slug
      *
      * @param string $slug
@@ -123,28 +86,5 @@ class Department
     public function getSlug()
     {
         return $this->slug;
-    }
-
-    /**
-     * Set lorem
-     *
-     * @param string $lorem
-     * @return Department
-     */
-    public function setLorem($lorem)
-    {
-        $this->lorem = $lorem;
-
-        return $this;
-    }
-
-    /**
-     * Get lorem
-     *
-     * @return string
-     */
-    public function getLorem()
-    {
-        return $this->lorem;
     }
 }
