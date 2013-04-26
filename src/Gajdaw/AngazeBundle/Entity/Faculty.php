@@ -3,6 +3,7 @@
 namespace Gajdaw\AngazeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Faculty
@@ -34,6 +35,12 @@ class Faculty
      * @ORM\Column(name="Shortcut", type="string", length=255)
      */
     private $Shortcut;
+
+    /**
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(length=128, unique=false, nullable=true)
+     */
+    private $slug;
 
     /**
      * Get id
@@ -83,5 +90,25 @@ class Faculty
     public function getShortcut()
     {
         return $this->Shortcut;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
