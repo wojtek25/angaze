@@ -29,18 +29,7 @@ class Position
      */
     private $name;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="tmp", type="string", length=255)
-     */
-    private $tmp;
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="lorem", type="string", length=255)
-     */
-    private $lorem;
+
     /**
      * @Gedmo\Slug(fields={"name"})
      * @ORM\Column(length=128, unique=false, nullable=true)
@@ -80,50 +69,7 @@ class Position
         return $this->name;
     }
 
-    /**
-     * Set tmp
-     *
-     * @param string $tmp
-     * @return Position
-     */
-    public function setTmp($tmp)
-    {
-        $this->tmp = $tmp;
 
-        return $this;
-    }
-
-    /**
-     * Get tmp
-     *
-     * @return string
-     */
-    public function getTmp()
-    {
-        return $this->tmp;
-    }
-    /**
-     * Set lorem
-     *
-     * @param string $lorem
-     * @return Position
-     */
-    public function setLorem($lorem)
-    {
-        $this->lorem = $lorem;
-
-        return $this;
-    }
-
-    /**
-     * Get lorem
-     *
-     * @return string
-     */
-    public function getLorem()
-    {
-        return $this->lorem;
-    }
     /**
      * Set slug
      *
