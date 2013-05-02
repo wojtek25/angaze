@@ -31,13 +31,6 @@ class Organization
     /**
      * @var string
      *
-     * @ORM\Column(name="tmp", type="string", length=255)
-     */
-    private $tmp;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="curator", type="string", length=255)
      */
     private $curator;
@@ -61,7 +54,7 @@ class Organization
     /**
      * Set name
      *
-     * @param string $name
+     * @param  string       $name
      * @return Organization
      */
     public function setName($name)
@@ -84,7 +77,7 @@ class Organization
     /**
      * Set Curator
      *
-     * @param string $curator
+     * @param  string       $curator
      * @return Organization
      */
     public function setCurator($curator)
@@ -105,29 +98,6 @@ class Organization
     }
 
     /**
-     * Set tmp
-     *
-     * @param string tmp
-     * @return Organization
-     */
-    public function setTmp($tmp)
-    {
-        $this->tmp = $tmp;
-
-        return $this;
-    }
-
-    /**
-     * Get tmp
-     *
-     * @return string
-     */
-    public function getTmp()
-    {
-        return $this->tmp;
-    }
-
-    /**
      * Set slug
      *
      * @param string $slug
@@ -140,7 +110,7 @@ class Organization
     /**
      * Get slug
      *
-     * @return string 
+     * @return string
      */
     public function getSlug()
     {
