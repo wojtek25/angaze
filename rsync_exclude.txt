@@ -7,3 +7,4 @@ LICENSE
 README.md
 rsync_exclude.txt
 /app/cache/
+/app/logs/
