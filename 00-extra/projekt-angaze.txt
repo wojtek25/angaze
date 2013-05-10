@@ -240,6 +240,17 @@ XIII. Relacje
     1:n Typ studiów -> Kierunek studiów
     1:n CourseType -> Course
 
+    j)
+    1:1
+    1:1 Oranizacja <-> Pracownik
+    1:1 Organization <-> Employee
+
+    k)
+    1:n *2
+    EmployeeSubject
+    1:n Employee -> EmployeeSubject
+    1:n Subject -> EmployeeSubject
+
 
 
 
