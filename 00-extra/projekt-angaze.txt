@@ -173,3 +173,21 @@ X. Dodajemy kolumnę tmp w modelu
 6. Dostosowujemy widoki: index.html.twig, show.html.twig
 
 
+XI. Usuwamy kolumnę w modelu
+============================
+
+1. Zmiana modelu: usuwamy kolumnę tmp
+2. php app/console doctrine:migrations:diff
+3. php app/console doctrine:migrations:migrate
+4. Dostosowujemy widoki i formularz
+
+
+XII. Kolumna slug
+
+
+XII. Kolumna slug
+
+XIII. Relacje
+
+
+
