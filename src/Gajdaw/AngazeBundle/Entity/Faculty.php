@@ -36,6 +36,11 @@ class Faculty
     private $slug;
 
     /**
+     * @ORM\OneToMany(targetEntity="department", mappedBy="faculty")
+     */
+    protected $department;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -86,5 +91,45 @@ class Faculty
     public function getSlug()
     {
         return $this->slug;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->department = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add department
+     *
+     * @param \Gajdaw\AngazeBundle\Entity\department $department
+     * @return Faculty
+     */
+    public function addDepartment(\Gajdaw\AngazeBundle\Entity\department $department)
+    {
+        $this->department[] = $department;
+    
+        return $this;
+    }
+
+    /**
+     * Remove department
+     *
+     * @param \Gajdaw\AngazeBundle\Entity\department $department
+     */
+    public function removeDepartment(\Gajdaw\AngazeBundle\Entity\department $department)
+    {
+        $this->department->removeElement($department);
+    }
+
+    /**
+     * Get department
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getDepartment()
+    {
+        return $this->department;
     }
 }
