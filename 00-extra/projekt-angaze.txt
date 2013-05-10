@@ -259,7 +259,7 @@ XIV. Procedura definiowania relacji
    W Kontynent.php: panstwa
    W Panstwo.php: kontynent
 
-2. php app/console doctrine:generate:entities
+2. php app/console doctrine:generate:entities GajdawAngazeBundle
    Wynik: wygenerowane metody dla relacji
 
 
