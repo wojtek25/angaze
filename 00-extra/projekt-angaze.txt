@@ -253,6 +253,15 @@ XIII. Relacje
 
 
 
+XIV. Procedura definiowania relacji
+
+1. Dodajemy właściwości: np.
+   W Kontynent.php: panstwa
+   W Panstwo.php: kontynent
+
+2. php app/console doctrine:generate:entities
+   Wynik: wygenerowane metody dla relacji
+
 
 
 
