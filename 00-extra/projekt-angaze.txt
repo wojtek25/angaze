@@ -3,7 +3,10 @@ I. Uruchomienie projektu
 
 0. Terminologia:
 
-Employee - pracownik
+
+Employee - Pracownik
+Institute - Instytut
+
 
 1. Symfony 2 SE
 
@@ -193,17 +196,52 @@ XII. Kolumna slug
 
 XIII. Relacje
 
-1:n
-Kontynent -> Panstwo
+    a) Wzór
+    1:n    Kontynent -> Panstwo
 
 
-Instytut: institute
+    b)
+    1:n Wydział -> Katedra
+    1:n Faculty -> Department
 
-Wydział: faculty
-Katedra: department
+    c)
+    1:n Katedra -> Pracownik
+    1:n Department -> Employee
+
+    d)
+    1:n Wydział -> Kierunek studiów
+    1:n Faculty -> Course
+
+    e)
+    1:n Rodzaj studiów -> Kierunek studiów
+    1:n CourseType -> Course
+
+    f)
+    1:n Rodzaj studiów -> Kierunek studiów
+    1:n CourseType -> Course
+
+    g)
+    1:n Kierunek studiów -> Przedmiot
+    1:n Course -> Subject
+
+    h)
+    1:n Type przedmiotu -> Przedmiot
+    1:n SubjectType -> Subject
+
+    i)
+    1:n Stanowisko -> Pracownik
+    1:n Position -> Employee
+
+    i)
+    1:n Pokój -> Pracownik
+    1:n Room -> Employee
+
+    j)
+    1:n Typ studiów -> Kierunek studiów
+    1:n CourseType -> Course
 
 
-Wydział -> katedra
-Faculty -> Department
+
+
 
 
