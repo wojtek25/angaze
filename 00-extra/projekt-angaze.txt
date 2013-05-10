@@ -1,6 +1,10 @@
 I. Uruchomienie projektu
 ========================
 
+0. Terminologia:
+
+Employee - pracownik
+
 1. Symfony 2 SE
 
 2. Dodatkowe punkty/Modyfikacje
@@ -188,6 +192,10 @@ XII. Kolumna slug
 XII. Kolumna slug
 
 XIII. Relacje
+
+1:n
+Kontynent -> Panstwo
+
 
 Instytut: institute
 
