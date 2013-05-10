@@ -36,6 +36,11 @@ class Course
      */
     private $slug;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="CourseType", inversedBy="course")
+     */
+    protected $courseType;
+
 
     /**
      * Get id
@@ -88,5 +93,28 @@ class Course
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Set courseType
+     *
+     * @param \Gajdaw\AngazeBundle\Entity\CourseType $courseType
+     * @return Course
+     */
+    public function setCourseType(\Gajdaw\AngazeBundle\Entity\CourseType $courseType = null)
+    {
+        $this->courseType = $courseType;
+    
+        return $this;
+    }
+
+    /**
+     * Get courseType
+     *
+     * @return \Gajdaw\AngazeBundle\Entity\CourseType 
+     */
+    public function getCourseType()
+    {
+        return $this->courseType;
     }
 }
