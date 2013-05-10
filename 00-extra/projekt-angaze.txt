@@ -262,6 +262,18 @@ XIV. Procedura definiowania relacji
 2. php app/console doctrine:generate:entities GajdawAngazeBundle:Employee
    Wynik: wygenerowane metody dla relacji
 
+3. Migracja:
+
+    php app/console doctrine:migrations:diff
+    php app/console doctrine:migrations:migrate
+
+4. Ponowne wygenerowanie
+   formularza lub całego CRUD
+   (lub ręczna aktualizacja)
+
+5. Definiowanie metody __toString() w klasie modelu
+
+
 
 
 

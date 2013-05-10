@@ -35,6 +35,11 @@ class Position
      * @ORM\Column(length=128, unique=false, nullable=true)
      */
     private $slug;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Employee", mappedBy="position")
+     */
+    protected $employees;
     /**
      * Get id
      *
@@ -88,5 +93,46 @@ class Position
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->employees = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add employees
+     *
+     * @param \Gajdaw\AngazeBundle\Entity\Employee $employees
+     * @return Position
+     */
+    public function addEmployee(\Gajdaw\AngazeBundle\Entity\Employee $employees)
+    {
+        $this->employees[] = $employees;
+    
+        return $this;
+    }
+
+    /**
+     * Remove employees
+     *
+     * @param \Gajdaw\AngazeBundle\Entity\Employee $employees
+     */
+    public function removeEmployee(\Gajdaw\AngazeBundle\Entity\Employee $employees)
+    {
+        $this->employees->removeElement($employees);
+    }
+
+    /**
+     * Get employees
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEmployees()
+    {
+        return $this->employees;
     }
 }
