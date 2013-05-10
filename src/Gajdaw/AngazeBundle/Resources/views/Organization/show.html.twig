@@ -1,6 +1,6 @@
-{% extends '::base.html.twig' %}
+{% extends "GajdawAngazeBundle::layout.html.twig" %}
 
-{% block body -%}
+{% block contents -%}
     <h1>Organization</h1>
 
     <table class="record_properties">
@@ -12,10 +12,6 @@
             <tr>
                 <th>Name</th>
                 <td>{{ entity.name }}</td>
-            </tr>
-            <tr>
-                <th>Curator</th>
-                <td>{{ entity.curator }}</td>
             </tr>
         </tbody>
     </table>

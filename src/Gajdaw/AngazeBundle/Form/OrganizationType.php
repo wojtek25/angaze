@@ -12,7 +12,6 @@ class OrganizationType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('curator')
         ;
     }
 
