@@ -29,13 +29,6 @@ class Organization
     private $name;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="curator", type="string", length=255)
-     */
-    private $curator;
-
-    /**
      * @Gedmo\Slug(fields={"name"})
      * @ORM\Column(length=128, unique=false, nullable=true)
      */
@@ -72,29 +65,6 @@ class Organization
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Set Curator
-     *
-     * @param  string       $curator
-     * @return Organization
-     */
-    public function setCurator($curator)
-    {
-        $this->curator = $curator;
-
-        return $this;
-    }
-
-    /**
-     * Get curator
-     *
-     * @return string
-     */
-    public function getCurator()
-    {
-        return $this->curator;
     }
 
     /**
