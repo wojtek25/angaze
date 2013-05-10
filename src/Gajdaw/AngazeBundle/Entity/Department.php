@@ -36,6 +36,11 @@ class Department
     private $slug;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Faculty", inversedBy="department")
+     */
+    protected $faculty;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -86,5 +91,28 @@ class Department
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Set faculty
+     *
+     * @param \Gajdaw\AngazeBundle\Entity\Faculty $faculty
+     * @return Department
+     */
+    public function setFaculty(\Gajdaw\AngazeBundle\Entity\Faculty $faculty = null)
+    {
+        $this->faculty = $faculty;
+    
+        return $this;
+    }
+
+    /**
+     * Get faculty
+     *
+     * @return \Gajdaw\AngazeBundle\Entity\Faculty 
+     */
+    public function getFaculty()
+    {
+        return $this->faculty;
     }
 }
