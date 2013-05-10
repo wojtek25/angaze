@@ -94,45 +94,4 @@ class Position
     {
         return $this->slug;
     }
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->employees = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-    
-    /**
-     * Add employees
-     *
-     * @param \Gajdaw\AngazeBundle\Entity\Employee $employees
-     * @return Position
-     */
-    public function addEmployee(\Gajdaw\AngazeBundle\Entity\Employee $employees)
-    {
-        $this->employees[] = $employees;
-    
-        return $this;
-    }
-
-    /**
-     * Remove employees
-     *
-     * @param \Gajdaw\AngazeBundle\Entity\Employee $employees
-     */
-    public function removeEmployee(\Gajdaw\AngazeBundle\Entity\Employee $employees)
-    {
-        $this->employees->removeElement($employees);
-    }
-
-    /**
-     * Get employees
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getEmployees()
-    {
-        return $this->employees;
-    }
 }
