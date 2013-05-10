@@ -21,7 +21,6 @@ class LoadOrganization implements FixtureInterface
        foreach ($yml as $item) {
            $organization = new Organization();
            $organization->setName($item['name']);
-           $organization->setCurator($item['curator']);
            $manager->persist($organization);
        }
        $manager->flush();
