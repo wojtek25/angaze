@@ -189,5 +189,13 @@ XII. Kolumna slug
 
 XIII. Relacje
 
+Instytut: institute
+
+Wydział: faculty
+Katedra: department
+
+
+Wydział -> katedra
+Faculty -> Department
 
 
